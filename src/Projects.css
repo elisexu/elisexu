@@ -1,0 +1,65 @@
+.Projects .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;   
+    flex-flow: row wrap; 
+    margin-top: 10vh;
+}
+
+.codebase, .cathacks, .nightlight {
+    flex-basis: 30%;
+    position: relative;
+}
+
+.codebase:hover .overlay, .cathacks:hover .overlay,.nightlight:hover .overlay {
+    opacity: 0.9;
+  }
+
+
+.Projects img {
+    width:  60vh;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #514EFF;
+  }
+
+.Projects .text {
+    color:  white;
+    font-size: 1.25em;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+@media (max-width: 800px) {
+    .Projects .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;   
+        flex-flow: column wrap; 
+        margin-top: 10vh;
+        margin-left: 5vh;
+        margin-right: 5vh;
+    }
+
+    .Projects .img {
+        width: 80vh;
+        height: 50vh;
+    }
+  }
